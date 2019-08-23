@@ -41,9 +41,9 @@
         @include('inc.topnav')
         @include('inc.sidebar')
         <div class="page-wrapper"> 
-            <div class="container-fluid">       
+               
                  @yield('content') 
-            </div>           
+                      
              <footer class="footer t-a-c">
                 © 2017 Cubic Admin
             </footer>

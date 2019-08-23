@@ -1,5 +1,6 @@
 @extends('inc.main')
-@section('content')    
+@section('content')
+<div class="container-fluid">       
     <div class="row m-0">
             <div class="col-sm-12">        
                 <div class="panel panel-default">
@@ -121,4 +122,5 @@
                 </div>
             </div>
         </div>
+</div>        
 @endsection
