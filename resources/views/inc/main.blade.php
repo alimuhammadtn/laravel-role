@@ -17,6 +17,7 @@
     <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ URL::asset('plugins/components/chartist-js/dist/chartist.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('plugins/components/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- ===== Animation CSS ===== -->
     <link href="{{ URL::asset('css/animate.css') }}" rel="stylesheet">
     <!-- ===== Custom CSS ===== -->
@@ -68,12 +69,14 @@
     <script src="{{ URL::asset('js/custom.js') }}"></script>
     <!-- ===== Plugin JS ===== -->
     <script src="{{ URL::asset('plugins/components/chartist-js/dist/chartist.min.js') }}"></script>
-    <script src="{{ URL::asset('plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}"></script>
+    <!--<script src="{{ URL::asset('plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}"></script>-->
     <script src="{{ URL::asset('plugins/components/sparkline/jquery.sparkline.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/components/sparkline/jquery.charts-sparkline.js') }}"></script>
     <script src="{{ URL::asset('plugins/components/knob/jquery.knob.js') }}"></script>
     <script src="{{ URL::asset('plugins/components/easypiechart/dist/jquery.easypiechart.min.js') }}"></script>
-    <script src="{{ URL::asset('js/db1.js') }}"></script>
+    <script src="{{ URL::asset('plugins/components/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
+    
+    <!--<script src="{{ URL::asset('js/db1.js') }}"></script>-->
     <!-- ===== Style Switcher JS ===== -->
     <script src="{{ URL::asset('plugins/components/styleswitcher/jQuery.style.switcher.js') }}"></script>
     <script src="../plugins/components/datatables/jquery.dataTables.min.js"></script>
@@ -86,14 +89,17 @@
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
     <script>
+
+        
   
     $('#example23').DataTable({
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
-    });
+    });  
     </script>
+    @yield('scripts')
 </body>
 
 </html>

@@ -57,6 +57,20 @@
                                 <li> <a href="{{ route('transactions.create') }}">Add new Transaction</a> </li>                                
                             </ul>
                         </li>
+                        <li>
+                            <a class="active waves-effect" href="javascript:void(0);" aria-expanded="false"><i class="icon-notebook fa-fw"></i> <span class="hide-menu"> Bills <span class="label label-rounded label-info pull-right">2</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li> <a href="{{ route('bills.index') }}">View Bills</a> </li>                                
+                                <li> <a href="{{ route('bills.create') }}">Add new Bills</a> </li>                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="active waves-effect" href="javascript:void(0);" aria-expanded="false"><i class="icon-notebook fa-fw"></i> <span class="hide-menu"> Purchase Request <span class="label label-rounded label-info pull-right">2</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li> <a href="{{ route('purchase_request.index') }}">View List</a> </li>                                
+                                <li> <a href="{{ route('purchase_request.create') }}">Add new List</a> </li>                                
+                            </ul>
+                        </li>
                         <!--<li>
                             <a class="waves-effect" href="javascript:void(0);" aria-expanded="false"><i class="icon-basket fa-fw"></i> <span class="hide-menu"> eCommerce </span></a>
                             <ul aria-expanded="false" class="collapse">

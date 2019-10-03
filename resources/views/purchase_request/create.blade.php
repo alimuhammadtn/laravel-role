@@ -4,7 +4,7 @@
     <div class="row m-0">
             <div class="col-sm-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Create New Transaction</div>
+                    <div class="panel-heading">Create New Purchase Request</div>
 
                     <div class="panel-body">
                         <!-- Display Validation Errors -->
@@ -19,7 +19,7 @@
                             </div>
                         @endif
 
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/transactions') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/purchase_request') }}">
                             {{ csrf_field() }}
 
                            
@@ -38,16 +38,16 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('amount') ? ' has-error' : '' }}">
-                                <label for="display_name" class="col-md-4 control-label">Amount:</label>
+                            <div class="form-group{{ $errors->has('quantity') ? ' has-error' : '' }}">
+                                <label for="display_name" class="col-md-4 control-label">Quantity:</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="amount" value="{{ old('amount') }}"
+                                    <input id="quantity" type="text" class="form-control" name="quantity" value="{{ old('quantity') }}"
                                            required autofocus>
 
-                                    @if ($errors->has('amount'))
+                                    @if ($errors->has('quantity'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('amount') }}</strong>
+                                        <strong>{{ $errors->first('quantity') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -64,40 +64,7 @@
                                     </span>
                                     @endif
                                 </div>
-                            </div>
-
-                            <div class="form-group{{ $errors->has('created') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Date</label>
-
-                                <div class="col-md-6">
-                                    <input id="datepicker" type="text" class="form-control mydatepicker" name="created" value="{{ date('d/m/Y') }}"
-                                           required autofocus>
-
-                                    @if ($errors->has('created'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('created') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group{{ $errors->has('members') ? ' has-error' : '' }}">
-                                <label for="users" class="col-md-4 control-label">Members</label>
-
-                                <div class="col-md-6">
-                                    @foreach ($members as $key => $member)
-                                        <input type="checkbox"  value="{{$key}}" name="members[]"> {{$member}}<br>
-                                    @endforeach
-
-                                    @if ($errors->has('members'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('members') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-
+                            </div>                 
 
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-4">

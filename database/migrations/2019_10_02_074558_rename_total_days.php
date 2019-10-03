@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTransactionsTable extends Migration
+class RenameTotalDays extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transactions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title');
-            $table->string('description');
-            $table->integer('user_id');           
-            $table->timestamps();
+        Schema::table('bills', function (Blueprint $table) {
+
+             $table->renameColumn('total_days', 'total_days_est');
         });
     }
 
@@ -29,6 +26,8 @@ class CreateTransactionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactions');
+        Schema::table('bills', function (Blueprint $table) {
+            //
+        });
     }
 }

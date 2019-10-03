@@ -23,4 +23,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::resource('roles','RoleController');
     Route::resource('users','UserController');
     Route::resource('transactions','TransactionController');
+    Route::resource('bills','BillsController');
+    Route::resource('purchase_request','PurchaseRequestController');
+    
 });
